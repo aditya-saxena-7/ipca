@@ -34,4 +34,4 @@ By implementing these steps, you should be able to determine whether the discrep
 
 ---
 
-### Implementation
+### Implementation [simulations_6_4.py](https://github.com/aditya-saxena-7/ipca/blob/main/synthetic_data/simulations_6_4.py)
