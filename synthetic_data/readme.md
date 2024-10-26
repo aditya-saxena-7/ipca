@@ -266,8 +266,4 @@ By comparing these errors across various noise levels and sample sizes, we can e
 
 ### 5. **Plotting Results**
 
-The following sections generate various plots to visualize the errors and the effect of Procrustes alignment.
-
----
-
 Plots for the above code can be found [here](https://github.com/aditya-saxena-7/ipca/tree/main/synthetic_data/plots)
