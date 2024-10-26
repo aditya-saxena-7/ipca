@@ -2,6 +2,9 @@
 
 ![Avg_Aligned_Error_heatmap](https://github.com/aditya-saxena-7/ipca/blob/main/synthetic_data/plots/20241026_133634/Avg_Aligned_Error_heatmap.png)
 
+<img src="https://github.com/aditya-saxena-7/ipca/blob/main/synthetic_data/plots/20241026_133634/Avg_Aligned_Error_heatmap.png" alt="Avg Aligned Error heatmap" width="400" height="300">
+
+
 **Description**: This heatmap shows the average aligned error (\(\| \Gamma_{\text{true}} - \Gamma_{\text{aligned}} \|^2\)) for various noise variances (\(\sigma^2\)) and sample sizes (N).
 
 **Interpretation**:
