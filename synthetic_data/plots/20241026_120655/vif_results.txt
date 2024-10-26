@@ -1,0 +1,1080 @@
+
+VIF for N=10, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  6.121245
+1  Instrument_1  5.790669
+2  Instrument_2  5.826930
+3  Instrument_3  5.439330
+4  Instrument_4  4.824330
+==================================================
+
+VIF for N=20, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.564943
+1  Instrument_1  5.504919
+2  Instrument_2  5.660884
+3  Instrument_3  5.215527
+4  Instrument_4  3.998345
+==================================================
+
+VIF for N=30, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.330910
+1  Instrument_1  5.222122
+2  Instrument_2  5.169079
+3  Instrument_3  4.770276
+4  Instrument_4  4.176188
+==================================================
+
+VIF for N=40, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  4.948382
+1  Instrument_1  4.793647
+2  Instrument_2  4.855421
+3  Instrument_3  4.491482
+4  Instrument_4  3.833370
+==================================================
+
+VIF for N=50, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  4.829499
+1  Instrument_1  4.807802
+2  Instrument_2  4.848815
+3  Instrument_3  4.442436
+4  Instrument_4  3.678339
+==================================================
+
+VIF for N=60, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  6.561507
+1  Instrument_1  6.519698
+2  Instrument_2  6.527961
+3  Instrument_3  6.019764
+4  Instrument_4  4.855516
+==================================================
+
+VIF for N=70, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.647940
+1  Instrument_1  5.494896
+2  Instrument_2  5.715283
+3  Instrument_3  5.089923
+4  Instrument_4  4.203746
+==================================================
+
+VIF for N=80, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.117754
+1  Instrument_1  4.931187
+2  Instrument_2  5.059462
+3  Instrument_3  4.683732
+4  Instrument_4  3.663394
+==================================================
+
+VIF for N=90, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  4.814329
+1  Instrument_1  4.743551
+2  Instrument_2  4.811207
+3  Instrument_3  4.309819
+4  Instrument_4  3.627186
+==================================================
+
+VIF for N=100, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  6.230996
+1  Instrument_1  6.101759
+2  Instrument_2  6.237336
+3  Instrument_3  5.589233
+4  Instrument_4  4.509067
+==================================================
+
+VIF for N=110, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  6.171346
+1  Instrument_1  6.163674
+2  Instrument_2  6.226579
+3  Instrument_3  5.675336
+4  Instrument_4  4.517653
+==================================================
+
+VIF for N=120, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  6.112064
+1  Instrument_1  6.030753
+2  Instrument_2  6.179327
+3  Instrument_3  5.633117
+4  Instrument_4  4.469053
+==================================================
+
+VIF for N=130, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.839257
+1  Instrument_1  5.726682
+2  Instrument_2  5.921293
+3  Instrument_3  5.459075
+4  Instrument_4  4.350580
+==================================================
+
+VIF for N=140, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.568979
+1  Instrument_1  5.528023
+2  Instrument_2  5.571719
+3  Instrument_3  5.054029
+4  Instrument_4  4.127629
+==================================================
+
+VIF for N=150, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.241536
+1  Instrument_1  5.133351
+2  Instrument_2  5.182548
+3  Instrument_3  4.772635
+4  Instrument_4  3.892168
+==================================================
+
+VIF for N=160, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.160699
+1  Instrument_1  5.239208
+2  Instrument_2  5.260220
+3  Instrument_3  4.701685
+4  Instrument_4  3.932948
+==================================================
+
+VIF for N=170, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.646337
+1  Instrument_1  5.566706
+2  Instrument_2  5.615948
+3  Instrument_3  5.138202
+4  Instrument_4  4.210466
+==================================================
+
+VIF for N=180, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.721031
+1  Instrument_1  5.703694
+2  Instrument_2  5.669396
+3  Instrument_3  5.207708
+4  Instrument_4  4.206547
+==================================================
+
+VIF for N=190, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.435156
+1  Instrument_1  5.381308
+2  Instrument_2  5.456862
+3  Instrument_3  4.995894
+4  Instrument_4  4.057616
+==================================================
+
+VIF for N=200, sigma^2=0.01
+        feature       VIF
+0  Instrument_0  5.795584
+1  Instrument_1  5.817911
+2  Instrument_2  5.918718
+3  Instrument_3  5.395604
+4  Instrument_4  4.438035
+==================================================
+
+VIF for N=10, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.128285
+1  Instrument_1  4.966032
+2  Instrument_2  5.072693
+3  Instrument_3  4.934484
+4  Instrument_4  3.816657
+==================================================
+
+VIF for N=20, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  4.802208
+1  Instrument_1  4.885808
+2  Instrument_2  4.996746
+3  Instrument_3  4.537443
+4  Instrument_4  3.764285
+==================================================
+
+VIF for N=30, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  4.792206
+1  Instrument_1  4.842687
+2  Instrument_2  4.926517
+3  Instrument_3  4.521405
+4  Instrument_4  3.763812
+==================================================
+
+VIF for N=40, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.940923
+1  Instrument_1  5.906919
+2  Instrument_2  5.976937
+3  Instrument_3  5.534534
+4  Instrument_4  4.379759
+==================================================
+
+VIF for N=50, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  4.534482
+1  Instrument_1  4.508652
+2  Instrument_2  4.549415
+3  Instrument_3  4.054018
+4  Instrument_4  3.541298
+==================================================
+
+VIF for N=60, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.910362
+1  Instrument_1  5.808900
+2  Instrument_2  5.794267
+3  Instrument_3  5.408232
+4  Instrument_4  4.363939
+==================================================
+
+VIF for N=70, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.373314
+1  Instrument_1  5.340134
+2  Instrument_2  5.254771
+3  Instrument_3  4.833254
+4  Instrument_4  3.859616
+==================================================
+
+VIF for N=80, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.513799
+1  Instrument_1  5.397436
+2  Instrument_2  5.535800
+3  Instrument_3  5.070646
+4  Instrument_4  4.114978
+==================================================
+
+VIF for N=90, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.513653
+1  Instrument_1  5.542070
+2  Instrument_2  5.623010
+3  Instrument_3  4.989503
+4  Instrument_4  4.153254
+==================================================
+
+VIF for N=100, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  6.201431
+1  Instrument_1  5.992202
+2  Instrument_2  6.224775
+3  Instrument_3  5.663996
+4  Instrument_4  4.557006
+==================================================
+
+VIF for N=110, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.374105
+1  Instrument_1  5.237471
+2  Instrument_2  5.423251
+3  Instrument_3  4.891395
+4  Instrument_4  4.121802
+==================================================
+
+VIF for N=120, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  6.187131
+1  Instrument_1  6.115952
+2  Instrument_2  6.118329
+3  Instrument_3  5.640816
+4  Instrument_4  4.517392
+==================================================
+
+VIF for N=130, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.325109
+1  Instrument_1  5.359904
+2  Instrument_2  5.411331
+3  Instrument_3  4.883416
+4  Instrument_4  3.996713
+==================================================
+
+VIF for N=140, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.029678
+1  Instrument_1  4.861733
+2  Instrument_2  5.029140
+3  Instrument_3  4.606203
+4  Instrument_4  3.774630
+==================================================
+
+VIF for N=150, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.749824
+1  Instrument_1  5.676792
+2  Instrument_2  5.866281
+3  Instrument_3  5.299269
+4  Instrument_4  4.259385
+==================================================
+
+VIF for N=160, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.187169
+1  Instrument_1  5.137910
+2  Instrument_2  5.181218
+3  Instrument_3  4.759810
+4  Instrument_4  3.801141
+==================================================
+
+VIF for N=170, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.959093
+1  Instrument_1  5.933709
+2  Instrument_2  6.108592
+3  Instrument_3  5.475121
+4  Instrument_4  4.407400
+==================================================
+
+VIF for N=180, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.316154
+1  Instrument_1  5.288564
+2  Instrument_2  5.358391
+3  Instrument_3  4.866652
+4  Instrument_4  3.972583
+==================================================
+
+VIF for N=190, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.406222
+1  Instrument_1  5.324191
+2  Instrument_2  5.433330
+3  Instrument_3  5.027230
+4  Instrument_4  4.037393
+==================================================
+
+VIF for N=200, sigma^2=0.03
+        feature       VIF
+0  Instrument_0  5.985511
+1  Instrument_1  5.890485
+2  Instrument_2  5.992774
+3  Instrument_3  5.422017
+4  Instrument_4  4.420853
+==================================================
+
+VIF for N=10, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  6.679861
+1  Instrument_1  6.033838
+2  Instrument_2  6.595709
+3  Instrument_3  5.917677
+4  Instrument_4  4.589891
+==================================================
+
+VIF for N=20, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  4.191798
+1  Instrument_1  4.151876
+2  Instrument_2  4.154209
+3  Instrument_3  3.686856
+4  Instrument_4  3.133834
+==================================================
+
+VIF for N=30, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.524278
+1  Instrument_1  5.427577
+2  Instrument_2  5.682152
+3  Instrument_3  5.076309
+4  Instrument_4  4.181451
+==================================================
+
+VIF for N=40, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  6.490987
+1  Instrument_1  6.468409
+2  Instrument_2  6.523955
+3  Instrument_3  6.003169
+4  Instrument_4  4.779596
+==================================================
+
+VIF for N=50, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.705690
+1  Instrument_1  5.819112
+2  Instrument_2  5.698653
+3  Instrument_3  5.210597
+4  Instrument_4  4.215582
+==================================================
+
+VIF for N=60, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.415184
+1  Instrument_1  5.404910
+2  Instrument_2  5.485954
+3  Instrument_3  4.943525
+4  Instrument_4  4.100398
+==================================================
+
+VIF for N=70, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.373669
+1  Instrument_1  5.274205
+2  Instrument_2  5.297990
+3  Instrument_3  4.784595
+4  Instrument_4  4.004379
+==================================================
+
+VIF for N=80, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.162098
+1  Instrument_1  5.099139
+2  Instrument_2  5.201740
+3  Instrument_3  4.687712
+4  Instrument_4  3.814742
+==================================================
+
+VIF for N=90, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  4.862366
+1  Instrument_1  4.982603
+2  Instrument_2  5.055804
+3  Instrument_3  4.599177
+4  Instrument_4  3.794662
+==================================================
+
+VIF for N=100, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.136038
+1  Instrument_1  5.098736
+2  Instrument_2  5.129350
+3  Instrument_3  4.817197
+4  Instrument_4  3.844481
+==================================================
+
+VIF for N=110, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.724621
+1  Instrument_1  5.627716
+2  Instrument_2  5.824715
+3  Instrument_3  5.266220
+4  Instrument_4  4.348598
+==================================================
+
+VIF for N=120, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.421798
+1  Instrument_1  5.382365
+2  Instrument_2  5.385939
+3  Instrument_3  4.939709
+4  Instrument_4  4.153507
+==================================================
+
+VIF for N=130, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  6.146789
+1  Instrument_1  6.132323
+2  Instrument_2  6.325820
+3  Instrument_3  5.651411
+4  Instrument_4  4.582966
+==================================================
+
+VIF for N=140, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.387589
+1  Instrument_1  5.362386
+2  Instrument_2  5.382645
+3  Instrument_3  4.892648
+4  Instrument_4  4.083408
+==================================================
+
+VIF for N=150, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.861710
+1  Instrument_1  5.870455
+2  Instrument_2  5.837448
+3  Instrument_3  5.395588
+4  Instrument_4  4.399675
+==================================================
+
+VIF for N=160, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.129700
+1  Instrument_1  5.180764
+2  Instrument_2  5.150716
+3  Instrument_3  4.723515
+4  Instrument_4  3.921958
+==================================================
+
+VIF for N=170, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.166045
+1  Instrument_1  5.154738
+2  Instrument_2  5.226420
+3  Instrument_3  4.704618
+4  Instrument_4  3.862209
+==================================================
+
+VIF for N=180, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.197052
+1  Instrument_1  5.166231
+2  Instrument_2  5.237182
+3  Instrument_3  4.810711
+4  Instrument_4  3.960064
+==================================================
+
+VIF for N=190, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.683904
+1  Instrument_1  5.655386
+2  Instrument_2  5.679608
+3  Instrument_3  5.174910
+4  Instrument_4  4.200961
+==================================================
+
+VIF for N=200, sigma^2=0.05
+        feature       VIF
+0  Instrument_0  5.619865
+1  Instrument_1  5.541181
+2  Instrument_2  5.627367
+3  Instrument_3  5.244319
+4  Instrument_4  4.223157
+==================================================
+
+VIF for N=10, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  4.532466
+1  Instrument_1  4.926400
+2  Instrument_2  4.777488
+3  Instrument_3  4.313181
+4  Instrument_4  3.391710
+==================================================
+
+VIF for N=20, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  3.838086
+1  Instrument_1  3.771395
+2  Instrument_2  3.905924
+3  Instrument_3  3.506337
+4  Instrument_4  2.855168
+==================================================
+
+VIF for N=30, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  4.451888
+1  Instrument_1  4.302260
+2  Instrument_2  4.438591
+3  Instrument_3  3.991612
+4  Instrument_4  3.462251
+==================================================
+
+VIF for N=40, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.111533
+1  Instrument_1  5.046789
+2  Instrument_2  4.973801
+3  Instrument_3  4.454013
+4  Instrument_4  3.749529
+==================================================
+
+VIF for N=50, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  4.942843
+1  Instrument_1  4.745174
+2  Instrument_2  4.875771
+3  Instrument_3  4.457253
+4  Instrument_4  3.784589
+==================================================
+
+VIF for N=60, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.022903
+1  Instrument_1  4.979556
+2  Instrument_2  5.121622
+3  Instrument_3  4.726920
+4  Instrument_4  3.783536
+==================================================
+
+VIF for N=70, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.360819
+1  Instrument_1  5.329960
+2  Instrument_2  5.460006
+3  Instrument_3  4.843275
+4  Instrument_4  3.977180
+==================================================
+
+VIF for N=80, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  6.531760
+1  Instrument_1  6.296642
+2  Instrument_2  6.509575
+3  Instrument_3  5.888795
+4  Instrument_4  4.694010
+==================================================
+
+VIF for N=90, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.823134
+1  Instrument_1  5.779621
+2  Instrument_2  5.816004
+3  Instrument_3  5.254664
+4  Instrument_4  4.250463
+==================================================
+
+VIF for N=100, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.178938
+1  Instrument_1  5.082394
+2  Instrument_2  5.189817
+3  Instrument_3  4.626362
+4  Instrument_4  3.859063
+==================================================
+
+VIF for N=110, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.042083
+1  Instrument_1  5.032732
+2  Instrument_2  5.114788
+3  Instrument_3  4.678657
+4  Instrument_4  3.766378
+==================================================
+
+VIF for N=120, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.760574
+1  Instrument_1  5.492562
+2  Instrument_2  5.706077
+3  Instrument_3  5.228804
+4  Instrument_4  4.236479
+==================================================
+
+VIF for N=130, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.473559
+1  Instrument_1  5.418131
+2  Instrument_2  5.471939
+3  Instrument_3  5.133031
+4  Instrument_4  4.154994
+==================================================
+
+VIF for N=140, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.176389
+1  Instrument_1  5.084867
+2  Instrument_2  5.202142
+3  Instrument_3  4.779507
+4  Instrument_4  3.864126
+==================================================
+
+VIF for N=150, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.424270
+1  Instrument_1  5.372017
+2  Instrument_2  5.377912
+3  Instrument_3  5.041930
+4  Instrument_4  4.117164
+==================================================
+
+VIF for N=160, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.674828
+1  Instrument_1  5.574475
+2  Instrument_2  5.777154
+3  Instrument_3  5.231574
+4  Instrument_4  4.272887
+==================================================
+
+VIF for N=170, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.585791
+1  Instrument_1  5.381742
+2  Instrument_2  5.536454
+3  Instrument_3  4.956822
+4  Instrument_4  4.067591
+==================================================
+
+VIF for N=180, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.761932
+1  Instrument_1  5.670238
+2  Instrument_2  5.752981
+3  Instrument_3  5.183830
+4  Instrument_4  4.304273
+==================================================
+
+VIF for N=190, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  5.884318
+1  Instrument_1  5.785181
+2  Instrument_2  5.970711
+3  Instrument_3  5.426246
+4  Instrument_4  4.431838
+==================================================
+
+VIF for N=200, sigma^2=0.07
+        feature       VIF
+0  Instrument_0  4.980391
+1  Instrument_1  4.939914
+2  Instrument_2  4.995905
+3  Instrument_3  4.573904
+4  Instrument_4  3.746115
+==================================================
+
+VIF for N=10, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.445570
+1  Instrument_1  5.335473
+2  Instrument_2  5.722831
+3  Instrument_3  5.166810
+4  Instrument_4  4.097854
+==================================================
+
+VIF for N=20, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  6.189385
+1  Instrument_1  6.042098
+2  Instrument_2  6.053158
+3  Instrument_3  5.754264
+4  Instrument_4  4.242337
+==================================================
+
+VIF for N=30, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.172573
+1  Instrument_1  5.121959
+2  Instrument_2  5.215337
+3  Instrument_3  4.613833
+4  Instrument_4  3.931392
+==================================================
+
+VIF for N=40, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.454305
+1  Instrument_1  5.453512
+2  Instrument_2  5.489189
+3  Instrument_3  5.092814
+4  Instrument_4  4.054302
+==================================================
+
+VIF for N=50, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  6.112909
+1  Instrument_1  5.848019
+2  Instrument_2  5.892872
+3  Instrument_3  5.226299
+4  Instrument_4  4.369970
+==================================================
+
+VIF for N=60, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.288985
+1  Instrument_1  5.424004
+2  Instrument_2  5.385689
+3  Instrument_3  4.842406
+4  Instrument_4  3.990871
+==================================================
+
+VIF for N=70, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  6.051240
+1  Instrument_1  5.970621
+2  Instrument_2  6.139635
+3  Instrument_3  5.416939
+4  Instrument_4  4.455083
+==================================================
+
+VIF for N=80, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.118813
+1  Instrument_1  5.149052
+2  Instrument_2  5.220145
+3  Instrument_3  4.827130
+4  Instrument_4  3.926009
+==================================================
+
+VIF for N=90, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  6.281360
+1  Instrument_1  6.244695
+2  Instrument_2  6.274416
+3  Instrument_3  5.751189
+4  Instrument_4  4.580675
+==================================================
+
+VIF for N=100, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.521686
+1  Instrument_1  5.437639
+2  Instrument_2  5.393919
+3  Instrument_3  4.993874
+4  Instrument_4  4.085189
+==================================================
+
+VIF for N=110, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.905943
+1  Instrument_1  5.905461
+2  Instrument_2  6.029767
+3  Instrument_3  5.394605
+4  Instrument_4  4.349260
+==================================================
+
+VIF for N=120, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.575105
+1  Instrument_1  5.412722
+2  Instrument_2  5.475221
+3  Instrument_3  4.913212
+4  Instrument_4  4.078115
+==================================================
+
+VIF for N=130, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.557381
+1  Instrument_1  5.465676
+2  Instrument_2  5.557775
+3  Instrument_3  5.051866
+4  Instrument_4  4.171521
+==================================================
+
+VIF for N=140, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.485689
+1  Instrument_1  5.439921
+2  Instrument_2  5.622401
+3  Instrument_3  4.946798
+4  Instrument_4  3.995634
+==================================================
+
+VIF for N=150, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.524502
+1  Instrument_1  5.351286
+2  Instrument_2  5.515481
+3  Instrument_3  4.932570
+4  Instrument_4  4.090266
+==================================================
+
+VIF for N=160, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.468274
+1  Instrument_1  5.455359
+2  Instrument_2  5.515945
+3  Instrument_3  5.041391
+4  Instrument_4  4.096301
+==================================================
+
+VIF for N=170, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.119389
+1  Instrument_1  5.074202
+2  Instrument_2  5.192575
+3  Instrument_3  4.693842
+4  Instrument_4  3.846943
+==================================================
+
+VIF for N=180, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.695846
+1  Instrument_1  5.605294
+2  Instrument_2  5.767423
+3  Instrument_3  5.249357
+4  Instrument_4  4.219757
+==================================================
+
+VIF for N=190, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.261304
+1  Instrument_1  5.241333
+2  Instrument_2  5.374869
+3  Instrument_3  4.866489
+4  Instrument_4  3.981994
+==================================================
+
+VIF for N=200, sigma^2=0.09
+        feature       VIF
+0  Instrument_0  5.849994
+1  Instrument_1  5.880776
+2  Instrument_2  5.929340
+3  Instrument_3  5.362423
+4  Instrument_4  4.323545
+==================================================
+
+VIF for N=10, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.849108
+1  Instrument_1  5.861943
+2  Instrument_2  6.258355
+3  Instrument_3  5.583834
+4  Instrument_4  4.118874
+==================================================
+
+VIF for N=20, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.728514
+1  Instrument_1  5.774500
+2  Instrument_2  5.865359
+3  Instrument_3  5.265790
+4  Instrument_4  4.340188
+==================================================
+
+VIF for N=30, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.561270
+1  Instrument_1  5.354626
+2  Instrument_2  5.674914
+3  Instrument_3  5.105534
+4  Instrument_4  4.103803
+==================================================
+
+VIF for N=40, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  4.861606
+1  Instrument_1  4.834721
+2  Instrument_2  4.980465
+3  Instrument_3  4.483153
+4  Instrument_4  3.657864
+==================================================
+
+VIF for N=50, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  4.883978
+1  Instrument_1  4.682201
+2  Instrument_2  4.815099
+3  Instrument_3  4.394673
+4  Instrument_4  3.639766
+==================================================
+
+VIF for N=60, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.214091
+1  Instrument_1  5.172313
+2  Instrument_2  5.178764
+3  Instrument_3  4.687042
+4  Instrument_4  3.976018
+==================================================
+
+VIF for N=70, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.101115
+1  Instrument_1  4.920742
+2  Instrument_2  5.143771
+3  Instrument_3  4.702542
+4  Instrument_4  3.821141
+==================================================
+
+VIF for N=80, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.110520
+1  Instrument_1  4.936548
+2  Instrument_2  4.988833
+3  Instrument_3  4.652245
+4  Instrument_4  3.823392
+==================================================
+
+VIF for N=90, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.343490
+1  Instrument_1  5.385309
+2  Instrument_2  5.491920
+3  Instrument_3  5.033484
+4  Instrument_4  4.119381
+==================================================
+
+VIF for N=100, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.847401
+1  Instrument_1  5.778480
+2  Instrument_2  5.881866
+3  Instrument_3  5.404374
+4  Instrument_4  4.424369
+==================================================
+
+VIF for N=110, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.817238
+1  Instrument_1  5.848711
+2  Instrument_2  5.777296
+3  Instrument_3  5.306909
+4  Instrument_4  4.342302
+==================================================
+
+VIF for N=120, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.218448
+1  Instrument_1  5.177657
+2  Instrument_2  5.224971
+3  Instrument_3  4.809213
+4  Instrument_4  3.879437
+==================================================
+
+VIF for N=130, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.095725
+1  Instrument_1  5.066201
+2  Instrument_2  5.200244
+3  Instrument_3  4.758322
+4  Instrument_4  3.851784
+==================================================
+
+VIF for N=140, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.538994
+1  Instrument_1  5.389043
+2  Instrument_2  5.513712
+3  Instrument_3  5.012957
+4  Instrument_4  4.053674
+==================================================
+
+VIF for N=150, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.916179
+1  Instrument_1  5.817642
+2  Instrument_2  5.957682
+3  Instrument_3  5.316104
+4  Instrument_4  4.403765
+==================================================
+
+VIF for N=160, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.640563
+1  Instrument_1  5.527692
+2  Instrument_2  5.668101
+3  Instrument_3  5.113272
+4  Instrument_4  4.138516
+==================================================
+
+VIF for N=170, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.354944
+1  Instrument_1  5.264858
+2  Instrument_2  5.346441
+3  Instrument_3  4.934202
+4  Instrument_4  4.063244
+==================================================
+
+VIF for N=180, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  4.969564
+1  Instrument_1  4.994009
+2  Instrument_2  5.090988
+3  Instrument_3  4.599601
+4  Instrument_4  3.824054
+==================================================
+
+VIF for N=190, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.563166
+1  Instrument_1  5.492040
+2  Instrument_2  5.617475
+3  Instrument_3  5.088662
+4  Instrument_4  4.162868
+==================================================
+
+VIF for N=200, sigma^2=0.1
+        feature       VIF
+0  Instrument_0  5.453047
+1  Instrument_1  5.498957
+2  Instrument_2  5.596940
+3  Instrument_3  5.079276
+4  Instrument_4  4.073002
+==================================================

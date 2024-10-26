@@ -1,0 +1,12 @@
+Simulation Parameters:
+Time periods (T): 200
+Number of latent factors (K): 3
+Number of observable instruments (L): 5
+Alpha regularization: 0
+Max iterations: 1000
+Tolerance: 0.001
+Sample sizes: [10, 40, 70, 100, 130, 160, 190]
+Sigma squares: [0.01, 0.03, 0.05]
+Number of simulations for averaging: 10
+
+Timestamp: 20241026_124723
