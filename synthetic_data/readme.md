@@ -24,7 +24,7 @@ To compare the estimated $\Gamma$ and true $\Gamma^*$ values and analyze alignme
      $$
 
      where $\| \cdot \|_F$ denotes the Frobenius norm, and $R$ is an orthogonal matrix (i.e., $R^T R = I$).
-   - This can be done using singular value decomposition (SVD) on $\Gamma^*^T \Gamma$.
+   - This can be done using singular value decomposition (SVD) on $\Gamma^{*T} \Gamma$.
 
 3. **Transform**: Rotate the estimated $\Gamma$ using $R$ to get $\Gamma_{\text{aligned}} = \Gamma R$.
 
