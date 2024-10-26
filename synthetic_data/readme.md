@@ -270,3 +270,4 @@ The following sections generate various plots to visualize the errors and the ef
 
 ---
 
+Plots for the above code can be found [here](https://github.com/aditya-saxena-7/ipca/tree/main/synthetic_data/plots)
