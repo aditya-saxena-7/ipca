@@ -31,3 +31,7 @@ To compare the estimated $\Gamma$ and true $\Gamma^*$ values and analyze alignme
 4. **Evaluate Alignment**: Calculate $\| \Gamma_{\text{aligned}} - \Gamma^* \|$. If this aligned error is significantly lower than the unaligned error, it suggests that rotational ambiguity was impacting the results. Otherwise, the observed error likely stems from model limitations or noise effects.
 
 By implementing these steps, you should be able to determine whether the discrepancies in $|\Gamma - \Gamma^*|$ are due to alignment issues or if they reflect limitations of the IPCA model under the given conditions.
+
+---
+
+### Implementation
