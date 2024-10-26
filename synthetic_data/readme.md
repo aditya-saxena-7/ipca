@@ -266,4 +266,6 @@ By comparing these errors across various noise levels and sample sizes, we can e
 
 ### 5. **Plotting Results**
 
-Plots for the above code can be found [here](https://github.com/aditya-saxena-7/ipca/tree/main/synthetic_data/plots)
+Plots for the above code can be found with interpretation [here](https://github.com/aditya-saxena-7/ipca/tree/main/synthetic_data/plots)
+
+All plots are dumped here: [20241026_133634](https://github.com/aditya-saxena-7/ipca/tree/main/synthetic_data/plots/20241026_133634)
