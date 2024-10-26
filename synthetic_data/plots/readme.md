@@ -1,8 +1,6 @@
-Here's a detailed analysis of each generated image and CSV, based on the data visualizations and the effects of Procrustes Analysis.
-
----
-
 ### 1. **Avg_Aligned_Error_heatmap.png**
+
+![Avg_Aligned_Error_heatmap](https://github.com/aditya-saxena-7/ipca/blob/main/synthetic_data/plots/20241026_133634/Avg_Aligned_Error_heatmap.png)
 
 **Description**: This heatmap shows the average aligned error (\(\| \Gamma_{\text{true}} - \Gamma_{\text{aligned}} \|^2\)) for various noise variances (\(\sigma^2\)) and sample sizes (N).
 
