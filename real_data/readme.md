@@ -55,9 +55,105 @@
    
 3. **Improvement from Alignment**: The difference between unaligned and aligned errors shows the effectiveness of Procrustes alignment. In our cross-validation summary, the alignment reduced error by an average of ~71%, meaning the Gamma matrices are more consistent across folds after alignment.
 
-### Summary of Results
+### Explanation and Interpretation of Results
 
-1. **Average Errors**: 
-   - The unaligned and aligned errors give insight into how much IPCA’s Gamma matrices vary across folds. Lower aligned errors mean the model’s factor loadings are more consistent after adjustment.
+---
 
-2. **Variance Explained**: The IPCA model explains only a small proportion of return variability (~0.3-0.9%) in this dataset, suggesting the latent factors derived from these characteristics aren’t strong predictors of daily returns. This low variance explained is typical in financial data, where returns are influenced by a broad set of unpredictable factors.
+### Data Dimensions
+
+1. **X shape**: `(5290, 4)` - This shows that `X`, our characteristics matrix, has 5290 rows and 4 columns (characteristics: volatility, MA ratio, price-MA ratio, and volume). Each row corresponds to one observation (a specific time and stock).
+
+2. **y shape**: `(5290,)` - This indicates `y`, our returns vector, also has 5290 entries matching the rows in `X`.
+
+3. **indices shape**: `(5290, 2)` - The `indices` array, which tracks time and entity (stock ID) pairs, has the same number of rows (5290) with two columns (time and entity) for each entry.
+
+---
+
+### Fold 1
+
+1. **Training Data Dimensions**:
+   - **X_train shape**: `(4230, 4)` and **y_train shape**: `(4230,)` - In Fold 1, 4230 observations are used for training. We dropped some observations for cross-validation, so the dimensions are smaller than the full dataset.
+
+2. **Fitting IPCA Model**:
+   - **Convergence Steps**:
+     - Convergence for Fold 1 takes 5 steps with progressively smaller aggregate updates, indicating the model is finding a stable solution.
+   - **Estimated Gamma (Factor Loadings)**:
+     - The Gamma matrix displays loadings for each characteristic on the three latent factors.
+       - For example, characteristic 0 (volatility) loads heavily on Factor 1, meaning volatility is strongly related to Factor 1.
+   - **Estimated Latent Factors**:
+     - These factors summarize the relationships across stocks and are derived from the characteristics. For Fold 1, the latent factors are small but show slight variability, reflecting their calculated influence on returns.
+   - **Variance Explained by Factors**:
+     - **Proportion of Variance Explained**: Only **0.34%** of the total variance in `y_train` is explained by the factors in Fold 1, indicating that latent factors from these characteristics only partially capture returns variability.
+
+---
+
+### Fold 2
+
+1. **Training Data Dimensions**:
+   - Same dimensions as Fold 1, with 4230 observations used for training.
+
+2. **Fitting IPCA Model**:
+   - **Convergence Steps**: In Fold 2, convergence takes 6 steps. We again see a series of aggregate updates declining toward stability.
+   - **Estimated Gamma (Factor Loadings)**:
+     - The loadings in Fold 2 are different from Fold 1, as IPCA recalculates them for each fold. For example, characteristic 1 (MA ratio) has a large loading on Factor 2, suggesting it contributes more to Factor 2 in this fold.
+   - **Variance Explained**: The variance explained by factors in Fold 2 is **0.45%**, slightly higher than in Fold 1 but still low, indicating limited predictive power.
+
+---
+
+### Fold 3
+
+1. **Training Data Dimensions**: Same as Fold 1 and Fold 2.
+
+2. **Fitting IPCA Model**:
+   - **Convergence Steps**: Fold 3 converges in 4 steps.
+   - **Gamma Matrix**:
+     - Gamma loadings vary again in Fold 3, reflecting the differences in training data. Here, characteristic 0 (volatility) and characteristic 1 (MA ratio) load more on Factor 1.
+   - **Variance Explained**: This time, the model explains **0.81%** of `y_train` variance, the highest observed so far, yet still modest.
+
+---
+
+### Fold 4
+
+1. **Training Data Dimensions**: In Fold 4, there are 4235 observations (slightly more than in previous folds).
+
+2. **Fitting IPCA Model**:
+   - **Convergence Steps**: Fold 4 converges quickly in 3 steps.
+   - **Gamma Matrix**:
+     - Gamma loadings shift again in Fold 4, with characteristic 0 (volatility) showing a lower loading on Factor 1 and a stronger presence on Factor 2.
+   - **Variance Explained**: The factors explain **0.97%** of the variance in `y_train`, slightly higher than previous folds, but still low.
+
+---
+
+### Fold 5
+
+1. **Training Data Dimensions**: Same as Fold 4, with 4235 observations.
+
+2. **Fitting IPCA Model**:
+   - **Convergence Steps**: Fold 5 takes the longest to converge, with 14 steps, indicating a more complex fit.
+   - **Gamma Matrix**:
+     - In Fold 5, the Gamma matrix shows characteristic 2 (price-MA ratio) has the highest loading on Factor 3, suggesting its importance to this factor in this fold.
+   - **Variance Explained**: The factors explain **0.48%** of the variance in `y_train`, indicating that predictive power remains limited across folds.
+
+---
+
+### Cross-Validation Summary: Procrustes Analysis
+
+1. **Unaligned vs. Aligned Errors**:
+   - **Average Unaligned Error**: `5.319066` - This measures the average difference between Gamma matrices across folds without alignment. High unaligned error suggests that Gamma matrices vary noticeably across folds.
+   - **Average Aligned Error**: `1.543845` - After using Procrustes alignment (which accounts for rotation and scaling), the aligned error is significantly lower, showing that the Gamma matrices are more consistent in structure when aligned.
+   - **Average Improvement**: **70.98%** - The alignment process provides a substantial reduction in error, meaning the model’s factor loadings are more consistent than they appear without adjustment.
+
+---
+
+### Interpretation of Results
+
+1. **Model Stability**:
+   - Despite variance in Gamma loadings across folds, Procrustes alignment reveals that the loadings retain a similar structure overall. This suggests that while the individual values vary, the relationships captured by IPCA are stable after adjusting for orientation differences.
+
+2. **Predictive Power**:
+   - The explained variance in each fold is very low (~0.3-0.9%), indicating that the latent factors derived from these characteristics explain only a small portion of the returns’ variability. This is common in financial data, where returns are influenced by many factors outside the chosen characteristics.
+
+3. **Importance of Alignment**:
+   - The large improvement in error post-alignment (over 70%) demonstrates that aligning factor loadings across folds is essential for ensuring the model’s results are interpretable and consistent. Without alignment, the observed variability might misleadingly suggest instability in the Gamma matrix.
+
+In summary, the IPCA model’s factors offer some insights but have limited predictive power in explaining daily stock returns with the characteristics selected. Procrustes alignment helps to standardize results across folds, showing that while the values differ, the structure is relatively consistent.
