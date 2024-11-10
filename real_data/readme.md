@@ -1,3 +1,5 @@
+### Please find the working code [here](https://github.com/aditya-saxena-7/ipca/blob/main/real_data/simulations_7_6.py)
+
 ### Dataset and Characteristics
 
 1. **Data Source**: This code uses daily stock data from Yahoo Finance for five major tech companies (Apple, Microsoft, Google, Amazon, and Meta) from January 1, 2015, to December 31, 2019. We download adjusted close prices and trading volumes for each of these stocks.
