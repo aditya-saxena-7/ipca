@@ -1,152 +1,61 @@
-**Summary of the Code (finance_ds_2.py):**
+### Dataset and Characteristics
 
-The code aims to apply the **Instrumented Principal Component Analysis (IPCA)** method to financial data to estimate latent factors that explain stock returns. 
+1. **Data Source**: This code uses daily stock data from Yahoo Finance for five major tech companies (Apple, Microsoft, Google, Amazon, and Meta) from January 1, 2015, to December 31, 2019. We download adjusted close prices and trading volumes for each of these stocks.
 
-**Datasets Used:**
+2. **Daily Returns Calculation**: We compute daily returns for each stock, which represent the percentage change in price from one day to the next. This gives us a time series of returns, which is essential in understanding stock behavior over time.
 
-1. **Fama-French 5-Factor Data:**
-   - Retrieved using `pandas_datareader.data` from the Fama-French dataset.
-   - Contains monthly factors like Market Risk Premium, Size Premium, Value Premium, Profitability Premium, and Investment Premium from 2015 to 2020.
+3. **Characteristics Creation**:
+   - **Volatility**: Calculated as a rolling 20-day standard deviation of returns, indicating the degree of price variation over this period. Higher values mean more variability in returns.
+   - **MA Ratio (Moving Average Ratio)**: This is the ratio of the 50-day moving average to the 200-day moving average, capturing long-term trends. A higher value typically indicates upward momentum.
+   - **Price-to-MA Ratio**: This ratio measures how the current price compares to the 50-day moving average. It helps assess if the price is above or below recent trends.
+   - **Volume**: Log-transformed average daily volume, representing the number of shares traded. Higher values suggest more active trading.
 
-2. **Stock Data for Selected Companies:**
-   - Downloaded using `yfinance`.
-   - Includes monthly adjusted close prices for companies such as Apple (AAPL), Microsoft (MSFT), Google (GOOG), Amazon (AMZN), Meta (META), Tesla (TSLA), Netflix (NFLX), NVIDIA (NVDA), Oracle (ORCL), and IBM.
-   - The date range is from 2015-01-01 to 2020-01-01.
+4. **Summary Statistics**:
+   - **Returns**: Mean returns across these stocks are positive but very small, indicating that daily gains are generally slight. Standard deviations (e.g., Apple: ~1.5%) show daily return variability.
+   - **Characteristics**: For example, `volatility` shows a mean of ~0.0145, suggesting daily returns vary within a low range. `ma_ratio` and `price_ma_ratio` are both near 1 on average, meaning prices hover around moving averages without drastic deviations.
 
-**Objective:**
+### Running IPCA on Each Fold (Cross-Validation)
 
-- **Primary Goal:** To model and predict stock returns using latent factors extracted through IPCA, leveraging both firm-specific stock return data and common economic factors from the Fama-French dataset.
-- **Specific Steps:**
-  1. Merge stock returns with Fama-French factors based on the date.
-  2. Prepare the data by mapping firms and dates to integer IDs to create a panel data structure suitable for IPCA.
-  3. Split the data into training and testing sets.
-  4. Standardize the features to ensure they are on the same scale.
-  5. Fit the IPCA model to the training data.
-  6. Extract and analyze the estimated factors and loadings.
- 
-### What Happens When No Instrumental Variables are Used?
+**Purpose**: Cross-validation with IPCA (Instrumented Principal Component Analysis) assesses how well our estimated factors (latent characteristics) explain returns. Splitting the data into folds and running IPCA on each allows us to test the model’s reliability and consistency.
 
-When **instrumental variables (IVs)** are not present, the IPCA model behaves similarly to a **traditional factor model** or **Principal Component Analysis (PCA)**. Instead of relying on external instruments to address endogeneity, the model treats the observable variables (in your case, the Fama-French factors) as the sole explanatory factors for the variation in stock returns.
-
-### Key Elements of the Model in This Case:
-
-1. **Dependent Variable (`y`)**: This is the stock return data for each firm at different times.
-2. **Observable Variables (`X`)**: These are the Fama-French 5 factors (Market Risk Premium, Size Premium, Value Premium, Profitability Premium, Investment Premium), which are used to explain stock returns.
-
-In this case, **IPCA reduces to a form of PCA or factor analysis**, where the goal is to:
-
-- Identify **latent factors** (common underlying trends) that explain the majority of the variation in stock returns.
-- Estimate **factor loadings** that describe how much each firm's stock returns are influenced by these latent factors.
-
-### What Does the `ipca_model` Calculate?
-
-In the absence of instrumental variables, **`ipca_model` is essentially performing a dimension reduction** where it finds the following:
-
-1. **Latent Factors (`f_t`)**: These are unobservable (hidden) factors that explain the common variation in stock returns across firms. These factors are similar to the principal components in PCA.
+1. **Cross-Validation Setup**: We divide the time dimension of the data into 5 folds (or sections). For each fold, we use one part of the data as the validation set and the remaining as the training set.
    
-   - For example, in finance, these latent factors might represent common economic trends, market sentiment, or sector-specific risks that affect multiple firms simultaneously.
+2. **Data Structure**: 
+   - We organize characteristics (`X`) and returns (`y`) in a panel format, where each row represents a specific stock at a specific time. The `indices` array keeps track of these time-stock pairs for easy reference.
 
-2. **Factor Loadings (`lambda_i`)**: These describe how much each firm's stock returns are sensitive to the latent factors.
+3. **Training Data Selection**: For each fold, we create masks to select the training samples, where `X_train` is the training characteristics and `y_train` is the target variable (returns). We repeat this process to ensure all data is used across folds.
+
+### Fit IPCA and Convergence Parameters
+
+1. **IPCA Setup and Fitting**: 
+   - We define IPCA with three latent factors (our hidden variables that aim to explain returns), no regularization (`alpha=0`), and a maximum of 1000 iterations for fitting.
+   - The IPCA algorithm iteratively estimates factors and loadings for each stock characteristic and converges when updates between iterations fall below a threshold (`iter_tol=1e-3`).
+
+2. **Convergence**: Convergence indicates that the model has stabilized in estimating factors and loadings for each fold. The number of iterations it takes to converge varies across folds and is printed out during fitting.
+
+### Estimated Parameters and Gamma Matrix (Factor Loadings)
+
+1. **Estimated Gamma Matrix**: `Gamma` represents the loadings of each characteristic on the latent factors. Each row corresponds to a characteristic (e.g., `volatility`, `ma_ratio`), and each column represents a latent factor. Higher values in the Gamma matrix indicate a stronger relationship between a characteristic and a latent factor.
    
-   - Firms with higher loadings on a particular factor are more influenced by that factor, while firms with lower loadings are less influenced.
+   - For instance, in Fold 1, volatility has high loadings on Factor 1, meaning volatility might heavily contribute to that factor.
 
-3. **Gamma (`\Gamma`) Matrix**: In the context of IPCA **without instrumental variables**, the **`Gamma` matrix represents the relationship between the observable characteristics (`X`, i.e., the Fama-French factors) and the estimated factor loadings (`lambda_i`)**.
+2. **Latent Factors**: The `factors` are estimated hidden variables derived from the characteristics, which IPCA uses to explain returns. These are essential to the IPCA model since they summarize the underlying relationships across stocks.
 
-   - Essentially, **`Gamma` is a matrix that links your Fama-French factors to the estimated factor loadings** for each firm. In other words, it tells you how the Fama-French factors influence the firm's sensitivity to the latent factors.
+3. **Variance Explained**: For each fold, we calculate the proportion of variance in `y_train` explained by the estimated factors. This shows how much of the variation in returns is captured by the latent factors. In this dataset, it’s quite low (~0.34% in Fold 1, increasing up to ~0.97%), meaning that while some variation is captured, much of it is left unexplained, likely due to the complexity of financial data.
 
-   - If no IVs are present, **`Gamma` is simply the estimated coefficient matrix that explains how each firm’s factor loading on the latent factors is determined by the observable characteristics** (the Fama-French factors). It's similar to a regression coefficient matrix where the dependent variable is the factor loading, and the independent variables are the Fama-French factors.
+### Procrustes Analysis
 
-### Gamma in the IPCA Model Without IVs
+1. **Purpose of Procrustes Analysis**: After obtaining the Gamma matrices for each fold, we need to check the consistency of factor loadings across folds. Since factor loadings (Gamma matrices) might be similar in structure but vary in scale or orientation, we align these matrices using Procrustes analysis.
 
-When instrumental variables are absent, **`Gamma`** can be interpreted as:
+2. **Unaligned vs. Aligned Errors**: 
+   - **Unaligned Error**: Measures the difference between Gamma matrices across folds without any adjustment. Higher values indicate more significant discrepancies.
+   - **Aligned Error**: Measures the difference after Procrustes alignment, which adjusts for rotation and scaling differences. Reduced aligned errors indicate better consistency in loadings across folds.
+   
+3. **Improvement from Alignment**: The difference between unaligned and aligned errors shows the effectiveness of Procrustes alignment. In our cross-validation summary, the alignment reduced error by an average of ~71%, meaning the Gamma matrices are more consistent across folds after alignment.
 
-- The **estimated coefficients** that link the observable firm characteristics (Fama-French factors) to the **factor loadings**.
-- In simpler terms, **`Gamma` tells you how much each firm’s loading on the latent factors depends on the observable characteristics**.
+### Summary of Results
 
-For instance, if a firm has a high sensitivity (loading) to a latent factor related to market-wide risks, the **`Gamma` matrix** shows how that sensitivity is related to observable characteristics like the market risk premium or size premium.
+1. **Average Errors**: 
+   - The unaligned and aligned errors give insight into how much IPCA’s Gamma matrices vary across folds. Lower aligned errors mean the model’s factor loadings are more consistent after adjustment.
 
-### Summary:
-
-- **Without instrumental variables**, the **`ipca_model`** is calculating:
-  - **Latent Factors (`f_t`)**: Hidden factors driving common variation in stock returns.
-  - **Factor Loadings (`lambda_i`)**: How each firm’s stock returns are influenced by the latent factors.
-  - **`Gamma` Matrix**: The estimated relationship between the observable Fama-French factors and the firm-specific factor loadings.
-
-- **Gamma represents the coefficients that describe how observable characteristics (Fama-French factors) influence the factor loadings**. Without instrumental variables, `Gamma` does not control for endogeneity, but it still provides insight into how much observable characteristics explain the variation in firm-level sensitivities to the latent factors.
-
-In conclusion, **`Gamma` shows how the observable characteristics map to the factor loadings**, even though there’s no mechanism to control for endogeneity in the absence of instrumental variables.
-
-**Issues Faced and Solutions Attempted:**
-
-1. **Error: `IndexError: too many indices for array`**
-   - **Cause:** Mismatch in the dimensions of the indices after using `train_test_split`.
-   - **Solution:** Stack the `indices_train` and `indices_test` arrays using `np.vstack()` to ensure they are 2-dimensional arrays suitable for indexing.
-
-2. **Error: `IndexError: arrays used as indices must be of integer (or boolean) type`**
-   - **Cause:** The `Firm` identifiers were strings, and `Date` identifiers were datetime objects, which are not valid for indexing in the IPCA model.
-   - **Solution:** Mapped `Firm` names and `Date` values to integer IDs to create numerical indices. This involved:
-     - Creating a mapping dictionary for firms and dates.
-     - Adding `Firm_ID` and `Date_ID` columns to the data.
-     - Using these IDs as indices in the IPCA model.
-
-3. **Error: `numpy.linalg.LinAlgError: Matrix is singular to machine precision` and `Matrix is not positive definite`**
-   - **Cause:** Multicollinearity among features and insufficient data led to singular matrices during matrix inversion and Cholesky decomposition in the IPCA algorithm.
-   - **Solutions Attempted:**
-     - **Reduced Multicollinearity:**
-       - Dropped highly correlated features, such as `'Market_Returns'`, which was the sum of `'Market_Risk_Premium'` and `'RF'`.
-       - Checked for multicollinearity using the Variance Inflation Factor (VIF) and confirmed that remaining features had acceptable VIF values.
-     - **Adjusted Model Parameters:**
-       - Reduced the number of factors (`n_factors`) to 1.
-       - Set `intercept=False` to simplify the model.
-       - Increased the regularization parameter `alpha` to values like `1e3` and `1e5` to stabilize the estimation.
-     - **Changed Data Type:**
-       - Switched between `data_type='panel'` and `data_type='portfolio'` in the IPCA model to see if it affected numerical stability.
-     - **Checked for Data Issues:**
-       - Ensured there were no missing or infinite values in the features and target variable.
-       - Confirmed that the shapes and data types of `X_train_scaled`, `y_train`, and `indices_train` were consistent and appropriate.
-
-4. **Persistent Error: `Matrix is not positive definite`**
-   - Despite the above efforts, the error persisted.
-   - **Additional Solutions Attempted:**
-     - **Expanded the Dataset:**
-       - Added more firms to the dataset to increase the cross-sectional dimension.
-       - Considered extending the time period to gain more observations.
-     - **Alternative Methods:**
-       - Explored using Principal Component Analysis (PCA) and Factor Analysis as alternative methods for dimensionality reduction and factor extraction.
-       - Considered mixed-effects models to handle panel data without relying on IPCA.
-
-**Current Issue:**
-
-- **Persistent `LinAlgError`:** The primary issue still faced is the `numpy.linalg.LinAlgError: Matrix is not positive definite` error during the Cholesky decomposition step in the IPCA algorithm.
-- **Likely Causes:**
-  - **Insufficient Data Size:** With only 10 firms and 59 time periods, the dataset may be too small for the IPCA method, which typically requires a larger number of cross-sectional units and time periods to function properly.
-  - **Model Complexity vs. Data Limitations:** The complexity of the IPCA model may not be suitable for the current dataset size, leading to numerical instability.
-- **Impact:** The error prevents the successful fitting of the IPCA model, halting further analysis and extraction of factors and loadings.
-
-**Summary of Steps Taken:**
-
-1. **Data Preparation:**
-   - Merged stock returns with Fama-French factors.
-   - Mapped categorical identifiers to integer IDs for firms and dates.
-   - Ensured data consistency and handled missing values.
-
-2. **Model Adjustments:**
-   - Addressed multicollinearity by dropping correlated features.
-   - Adjusted model parameters (`n_factors`, `intercept`, `alpha`).
-   - Tested different data types in the IPCA model (`'panel'` and `'portfolio'`).
-
-3. **Diagnostic Checks:**
-   - Calculated VIF to assess multicollinearity.
-   - Verified data shapes, types, and absence of NaNs.
-   - Tried increasing regularization to stabilize the estimation.
-
-4. **Alternative Approaches:**
-   - Explored PCA and Factor Analysis as alternatives to IPCA.
-   - Considered mixed-effects models for panel data analysis.
-
-**Conclusion and Recommendations:**
-
-- **Primary Obstacle:** The inability to fit the IPCA model due to numerical errors likely stemming from insufficient data size.
-- **Recommendations:**
-  - **Expand the Dataset:** Increase the number of firms (ideally to several hundred) and extend the time period to include more observations. This can provide the necessary variation for the IPCA model to estimate factors reliably.
-  - **Alternative Methods:** If expanding the dataset is not feasible, proceed with PCA, Factor Analysis, or mixed-effects models, which may be more suitable for smaller datasets.
+2. **Variance Explained**: The IPCA model explains only a small proportion of return variability (~0.3-0.9%) in this dataset, suggesting the latent factors derived from these characteristics aren’t strong predictors of daily returns. This low variance explained is typical in financial data, where returns are influenced by a broad set of unpredictable factors.
