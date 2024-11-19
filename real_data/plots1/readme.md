@@ -172,16 +172,56 @@
 
 ---
 
-### Overall Insights
+### **Overall Insights**
 
-1. **Effectiveness of Procrustes Alignment**:
-   - The aligned error heatmaps and percentage difference heatmaps confirm that Procrustes alignment significantly reduces discrepancies across folds, improving the stability of factor loadings.
-   - Alignment is particularly effective in the 1-factor case, where most errors are reduced to near-zero values.
+The updated results and visualizations provide deeper clarity into the effects of reducing the number of factors and the effectiveness of Procrustes alignment in improving the consistency of factor loadings across folds. Here are the **key takeaways**:
 
-2. **Complexity with 2 Factors**:
-   - Errors are consistently higher in the 2-factor case, both before and after alignment, highlighting the increased complexity of interpreting multiple latent factors.
+---
 
-3. **Limitations of Alignment**:
-   - Occasional negative percentage differences suggest that alignment may not fully resolve structural differences in certain fold pairs, especially for higher factor counts or divergent Gamma matrices.
+#### **1. Reduced Factors Improve Interpretability**
+- **1 Factor**:
+  - The single-factor model focuses primarily on short-term price deviations (Price-MA Ratio), as evidenced by strong loadings on this characteristic.
+  - Simpler models, like 1 factor, tend to have lower overall error after alignment, highlighting their interpretability and robustness.
+  - Variance explained is low (~0.3–0.4% on average), but the model is more stable across folds.
 
-These plots reinforce the importance of alignment for ensuring consistency in factor loadings and highlight the trade-off between interpretability and complexity when increasing the number of latent factors. Let me know if further analysis is required!
+- **2 Factors**:
+  - Adding a second factor increases flexibility, capturing additional dynamics such as risk (Volatility) and long-term trends (MA Ratio).
+  - Variance explained improves (~0.6–0.8% on average), showing that the second factor adds explanatory power.
+  - However, the complexity increases, resulting in higher alignment errors compared to the single-factor model.
+
+---
+
+#### **2. Procrustes Alignment Reduces Errors Effectively**
+- Across both 1 and 2-factor configurations, Procrustes alignment significantly reduces discrepancies in factor loadings across folds.
+- **1 Factor**:
+  - Alignment reduces unaligned errors (~3.9 across fold pairs) to very low aligned errors (~0.1–0.15), improving consistency significantly.
+  - Percentage improvement is as high as **97%** for certain fold comparisons, confirming the alignment process is highly effective.
+- **2 Factors**:
+  - Alignment still reduces errors but less effectively than for 1 factor. Aligned errors remain around **0.65–1.5**, reflecting the increased complexity of interpreting two factors.
+  - Percentage improvement varies (~75–94%) across most pairs, with occasional misalignments suggesting structural differences between folds.
+
+---
+
+#### **3. Characteristics and Factor Contributions**
+- **Gamma Matrix Insights**:
+  - **1 Factor**: The single latent factor is primarily driven by **Price-MA Ratio** with some influence from Volatility, suggesting it reflects short-term price deviations and risk.
+  - **2 Factors**: 
+    - **Factor 0** is driven by Price-MA Ratio and Volume, capturing short-term trends and trading activity.
+    - **Factor 1** is driven by Volatility and MA Ratio, emphasizing risk and long-term trend dynamics.
+
+---
+
+#### **4. Trade-Off Between Complexity and Consistency**
+- **Simplicity of 1 Factor**:
+  - The 1-factor model is simpler and achieves greater consistency across folds. Lower alignment errors and high percentage improvements make it a more robust choice when interpretability is prioritized.
+- **Flexibility of 2 Factors**:
+  - Adding a second factor improves the explanatory power of the model but increases complexity. This introduces more variability in factor loadings across folds, requiring greater reliance on alignment to achieve consistency.
+
+---
+
+#### **5. Variance Explained Remains Low**
+- Despite improvements with 2 factors, the variance explained by the model remains low (~0.6–0.8% on average), indicating that the chosen characteristics (Volatility, MA Ratio, Price-MA Ratio, and Volume) capture only a small portion of return variability.
+- This suggests that other latent dynamics or unobserved factors may play a significant role in explaining stock returns.
+
+---
+
