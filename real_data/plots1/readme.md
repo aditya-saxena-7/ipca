@@ -1,6 +1,22 @@
 ### Date: 19th November, 2025
 ### Code file is [here]()
 
+### **What Changes Were Made?**
+
+1. **Reduced Factors**:
+   - The number of latent factors tested (`n_factors`) is explicitly set to `[1, 2]` using the `factor_counts` list.
+   - This ensures that the IPCA model is run separately for configurations with **1 factor** and **2 factors**, allowing us to compare their performance in explaining variance.
+
+2. **Variance Explained Calculation**:
+   - The variance explained by the latent factors is computed for each fold, and results are stored for both configurations.
+   - This helps us understand how the number of factors impacts the explanatory power of the model.
+
+3. **Updated Visualizations**:
+   - Separate heatmaps are generated for the Gamma matrix (\( \Gamma \)) for both configurations, showcasing how characteristics load onto the factors.
+   - A comparison plot is created to display the variance explained across folds for 1 factor versus 2 factors.
+
+---
+
 ### 1. **Gamma Matrix Heatmap - Fold 5 (1 Factor)** (`gamma_heatmap_fold_5_1_factors.png`)
 
 ![gamma_heatmap_fold_5_1_factors](https://github.com/aditya-saxena-7/ipca/blob/main/real_data/plots1/gamma_heatmap_fold_5_1_factors.png)
