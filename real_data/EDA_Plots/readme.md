@@ -56,6 +56,9 @@ This section provides insights into the input data's structure and relationships
 ### **8.2 Correlation Analysis**
 
 #### **8.2.1 Adjusted Close Prices**
+
+![adj_close_corr_heatmap](https://github.com/aditya-saxena-7/ipca/blob/main/real_data/EDA_Plots/adj_close_corr_heatmap.png)
+
 - The correlation heatmap reveals strong positive relationships between the adjusted close prices of all stocks:
   - **Highest Correlations**:
     - Microsoft (MSFT) and Amazon (AMZN): \(0.95\)
@@ -69,6 +72,9 @@ This section provides insights into the input data's structure and relationships
 ---
 
 #### **8.2.2 Characteristics**
+
+![characteristics_corr_heatma](https://github.com/aditya-saxena-7/ipca/blob/main/real_data/EDA_Plots/characteristics_corr_heatmap.png)
+
 - **Correlation Highlights**:
   - **Volatility and Volume**: Moderately positive correlation (\(0.48\)), suggesting that periods of high trading activity are associated with increased volatility.
   - **Volatility and Price-MA Ratio**: Strong negative correlation (\(-0.55\)), indicating that high volatility corresponds to prices diverging from their moving averages.
@@ -82,6 +88,9 @@ This section provides insights into the input data's structure and relationships
 ### **8.3 Visualizations**
 
 #### **8.3.1 Pairplot of Characteristics**
+
+![characteristics_pairplot](https://github.com/aditya-saxena-7/ipca/blob/main/real_data/EDA_Plots/characteristics_pairplot.png)
+
 - The pairplot shows scatter plots and distributions for each characteristic pair:
   - **Clustered Patterns**: Observed between Volatility and Volume, supporting their moderate positive correlation.
   - **Independent Spread**: MA Ratio exhibits a relatively uniform spread, consistent with its weak correlation with other characteristics.
@@ -94,9 +103,15 @@ This section provides insights into the input data's structure and relationships
 ### **8.4 Observed Trends**
 
 #### **8.4.1 Volatility Over Time**
+
+![volatility_over_time](https://github.com/aditya-saxena-7/ipca/blob/main/real_data/EDA_Plots/volatility_over_time.png)
+
 - Volatility appears cyclical, with periodic spikes likely reflecting broader market events or earnings announcements.
 
 #### **8.4.2 Volume Over Time**
+
+![volume_over_time](https://github.com/aditya-saxena-7/ipca/blob/main/real_data/EDA_Plots/volume_over_time.png)
+
 - Volume trends are relatively stable but exhibit occasional surges, potentially linked to news events or significant market movements.
 
 ---
