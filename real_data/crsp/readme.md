@@ -1,5 +1,5 @@
 ### **Data Source**
-
+---
 1. **Data Source**:
    - The dataset was sourced from the **CRSP/Compustat Merged Database** via **Wharton Research Data Services (WRDS)**.
    - This database integrates security price, return, and volume data from the NYSE, AMEX, and NASDAQ stock markets, along with fundamental data from Compustat.
