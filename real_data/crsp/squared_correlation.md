@@ -176,6 +176,10 @@ The R^2 values, computed as the **squared correlation** between observed and pre
 
 ---
 
+![characteristics_corr_heatma](https://github.com/aditya-saxena-7/ipca/blob/main/real_data/EDA_Plots/squared_corr_1.png)
+
+---
+
 ### **Key Observations**:
 1. **Low R² Values**: Across all folds, R^2 values are very close to zero, indicating that the predicted returns from the IPCA model explain only a small fraction of the variability in the observed returns.
     - The **highest R²** is observed in **Fold 2** at **2.59%**, while the other folds exhibit negligible R^2 values.  
